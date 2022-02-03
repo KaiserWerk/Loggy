@@ -11,6 +11,7 @@ import (
 	"os/signal"
 	"strings"
 	"syscall"
+	"time"
 )
 
 const bufferSize = 1024
@@ -134,7 +135,7 @@ func handleMessages(w io.Writer, messageCh chan []byte) {
 		select {
 		case msg, ok := <-messageCh:
 			if ok {
-				_, err := fmt.Fprintln(w, strings.TrimSpace(string(msg)))
+				_, err := fmt.Fprintf(w, "%s %s\n", time.Now().Format(time.RFC3339), strings.TrimSpace(string(msg)))
 				if err != nil {
 					fmt.Println("could not execute write:", err.Error())
 				}
