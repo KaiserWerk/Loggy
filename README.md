@@ -29,9 +29,9 @@ different log path or want to bind to different ports, run it with the required 
 > .\loggy-vX.X.X-win64.exe --logpath="C:\\Logs" --udp=7442 --tcp=7441
 ```
 
-```cmd
+```bash
 # On Linux:
-> ./loggy-vX.X.X-linux64 --logpath="/var/logs/loggy" --udp=7442 --tcp=7441
+$ ./loggy-vX.X.X-linux64 --logpath="/var/logs/loggy" --udp=7442 --tcp=7441
 ```
 
 ### Produced Log Files
