@@ -16,7 +16,7 @@ running *Loggy* and that two ports are open to bind to.
 
 ### Usage
 
-By default, log files are places beside the executable.
+By default, log files are placed beside the executable.
 
 The default ports are:
 - TCP: 7441
